@@ -304,7 +304,7 @@ function() {
 code
 }
 ```
-* 함수와 메소드의 차이점
+### 함수와 메소드의 차이점
 * 함수는 어디서나 독립적으로 사용 가능하다
 `functionName()`
 * 메소드는 object 에 속해서 사용된다.
@@ -355,18 +355,137 @@ func fullNameMaker (_ first : String,_ last : String) ->String {
 let myName = fullNameMaker("Kang","heesung")
 print(myName)
 ```
-
-* overload
+### overload
 *  함수의 이름은 같지만 parameter 를 다르게 하여 다양한유형의 호출에 응답이 가능하는것
 *  같은이름을 가진다
 *  하지만 다른 행동을 취한다.
 
 ```
-func myBrand (brand : String, date : Int) {
-print("\(brand)의 제품을 나는 \(date)날에 샀어")
+func myBrand (brand : String, price : Int) {
+print("\(brand)의 제품을 나는 \(date)가격에 샀어")
 }
-func mybrand
+func mybrand (brand : String, price : Double) {
+print("\(brand)의 제품을 나는 \(date)가격에 샀어")
+}
 ```
+
+### in - out parameter
+* 함수의 밖에서  존재하는 변수를 가져올때 그 변수는 let 형태의 상수로 가져온다
+*  그래서 함수내에선 그 변수의 값을 변경시키는게 불가능하다
+*  하지만 그 변수를 var 형태로 사용하려면 inout 이라는 수식어를 parameter type 앞에 붙여주면된다.
+
+```
+var value = 1
+func increasement(_ value : inout Int){
+    value += 1
+    print(value)
+}
+increasement(&value)
+// 매개변수 앞에 & 을 붙여줘야한다
+``` 
+
+### function 을 함수의 parameter로 사용하는것
+
+```
+func add(_ a : Int , _ b : Int) -> Int {
+    return a + b
+}
+
+func subtract(_ a : Int , _ b : Int) -> Int {
+    return a - b
+}
+
+var function = add
+function(4,2)
+function = subtract
+function(4,2)
+
+//함수 이름을 계산기 라고 했을때 그 계산기에 덧셈밸셈 곱하기 나눗셈등의 함수를 정하고
+ 숫자를 받은다음 그 함수를 대입한것.
+func printResult(_ function: (Int,Int) -> (Int), _ a : Int, _ b : Int){
+// 매개변수로서 들어올수 있는 함수의 형태는 2개의 정수값을 받아서 
+   1개의 정수값을 반환 하는 형태만 들어올수있다.
+    let result = function(a,b)
+    print(result)
+}
+
+printResult(add, 9, 3)
+// 12
+```
+
+* 함수는 한가지 일만 할수있도록 코드를 짜는게 좋다
+* 값을 구하는 함수와 그 값을 출력하는 함수를 하나로 합쳐서 만들지 말고 분리해서 만들자.
+* 재사용성을 높이기 위함
+* 가능한 한 10줄을넘지않게 만들자
+
+
+
+## 10. array
+
+* 각 elements 들을 순서에 따라서 배열해놓은것
+*  배열 안에는 같은 type 만 존재할수있다.
+*  `String` 끼리만, `Int` 끼리만.
+*  index 라고 불리는 순서가 존재한다
+*  1부터 시작하는게 아닌 0 부터 시작한다 (ex : 0,1,2,3,4...)
+*  각 요소들의 순서가 중요하게 쓰일경우 사용한다.
+
+### 배열에서 주로 사용하는 method 
+* count  
+
+```
+// array 내의 elements 갯수를 알려준다
+var array : Array<Int> = [2,4,6,8]
+array.count
+// 4
+```
+
+* isempty  
+ 
+```
+// array 가 현재 비어있는 상태인가 
+array.isempty
+// false
+// Bool 값을 반환한다
+
+```
+
+* append
+
+```
+// array  에 elements 를 추가하는것
+array.append(1)
+array += [3,5]
+even.append(contentsOf: [18,20])
+// 3가지 방법이 있으며 전부다 추가하는것이다
+```
+
+* enumerated
+
+```
+// array 의 index 값과 요소의 값 2가지 모두에 접근하고 싶을때 사용
+var array : Array<Int> = [1,2,3,4]
+for (index,num) in array.enumerated() {
+    print("\(index+1)번째 숫자는 \(num)입니다")
+}
+array.enumerated()
+1번째 숫자는 1입니다
+2번째 숫자는 2입니다
+3번째 숫자는 3입니다
+4번째 숫자는 4입니다
+
+```
+
+* 특정 index 에 접근
+	
+```
+array[2]
+```
+* contains
+* insert
+* removeall
+* swapAt
+* dropFirst
+* 등등
 
 
 
