@@ -119,7 +119,7 @@ func countDown(number : Int) {
 countDown(number: 8)
 ```
 
-## 7. while
+## 6. while
 
 while 문에는 repeat while , while 문 2가지 종류가 있다
 
@@ -169,6 +169,7 @@ j += 1
 * `...`,`..<`2종류가 있다
 * `x...y`  x 이상 y 이하 를 뜻한다.
 *  `x..<y` x 이상 y 미만을 뜻한다
+*  for 루프 에서 앞부분 `for i in 1...4 ` i 부분의 문자는 어떤것으로도 할수있으며 루프안에서만 유효한 것이다. 
 
 ```
 let closedRange = 1...10
@@ -459,6 +460,46 @@ even.append(contentsOf: [18,20])
 // 3가지 방법이 있으며 전부다 추가하는것이다
 ```
 
+* insert
+
+```
+array.insert(9, at : 3)
+// 9 를 3번 index에 추가하는것
+append 와 비슷하지만 index 를 지정해서 할수있다.
+```
+
+
+* swapAt
+
+```
+array.swapAt(2,4)
+//2 번과 4번 index 에 위치한 elements를 자리바꿈한다.
+```
+
+* remove
+
+```
+array.remove(at : n)
+// n 번째 index에 위치한 element 를 제거한다.
+//3번 index 에 위치한것을제거한다면, 그뒤에 다른elements 의 index 는 한칸씩 당겨져온다
+
+
+*removeall
+
+array.removeAll()
+// array안의 모든 elements 를 제거한다, 빈 array로 만들어버림
+```
+
+* dropFirst,Last
+
+```
+dropFirst(n)
+앞에서부터 n 번째 까지의 elements 를 제거하는것
+
+dropLast(n)
+뒤에서 부터 n 번째 까지의 elements 를 제거하는것
+```
+
 * enumerated
 
 ```
@@ -466,26 +507,386 @@ even.append(contentsOf: [18,20])
 var array : Array<Int> = [1,2,3,4]
 for (index,num) in array.enumerated() {
     print("\(index+1)번째 숫자는 \(num)입니다")
+    //index,num 변수이름을 다른 어떤것으로 바꿔도 괜찮다.
 }
-array.enumerated()
+/*
 1번째 숫자는 1입니다
 2번째 숫자는 2입니다
 3번째 숫자는 3입니다
 4번째 숫자는 4입니다
-
+*/
 ```
 
 * 특정 index 에 접근
 	
 ```
 array[2]
+//2 번 index(2번째 가 아닌 0,1,2 즉 3번째) 에 접근하여 그값을 보여줌
 ```
 * contains
-* insert
-* removeall
-* swapAt
-* dropFirst
-* 등등
+
+```
+array.contains(4)
+array 가 4를 포함하고있는가?
+// true
+// isempty 와 같이 bool 값을 반환한다
+
+```
+
+* 등등 엄청많다
+
+
+
+
+## 11. Dictionary
+
+* array와 다르게 순서가 존재하지않는다.
+* key 와 value 의 짝으로 구성된다
+* array 는 순서 기반으로 값을 관리, dictionary 는 key 값을 기반으로관리(순서 상관 없음)
+
+### Dictionary 만드는법
+```
+// 내가 가진 애플 제품을 key , 그 제품의 세대를 value 로 하는 dictionary 
+var myApple : Dictionary<String,String> = [ "iphone": "xs", "ipad mini": "5" ]
+var myApple : [String : String] = [ "iphone": "xs", "ipad mini": "5" ]
+2가지모두 동일한 선언 방법이지만 1번은 array,set,dictionary 모두 통일된 방법이고 
+2번은 좀더 간단한 방법이다 본인이 편한대로 하자.
+```
+
+* 만약 특정 key 값을 가진 value 가 존재하는지 모를때는 optional binding 을 이용한다
+
+```
+if let score = scoreDic["jason"] {
+    score
+} else {
+    //...score 없음
+}
+```
+
+### Dictionary 기본적 사용법
+
+```
+myApple["iphone"]
+// xs 가 나오게 된다
+
+
+//scoreDic=[:]
+//이렇게 하면 빈 딕셔너리로만들기 가능
+
+scoreDic["kim"] = 90
+//해당하는 부분의 내용을 바꾸고싶을때 호출후에 숫자 넣어주면 변경 가능
+
+
+scoreDic["Jack"] = 99
+//없는 사람 추가하고싶으면 내용 변경과 동일하게.. 내가볼땐 위에 수정하는것도 그냥 추가같은개념으로 하는거같다
+
+scoreDic["kim"] = nil
+//이렇게 하면 제거할수있다
+
+
+//for loop
+for (name,score) in scoreDic{
+    print("\(name),\(score)")
+}
+//위의 배열과 비슷하지만 enumerated가 없이도 2가지값을 뽑아온다,
+ 왜냐하면 key 값에 1가지 value가 연결되어있어서 
+ 한가지를 뽑으면 key 와 value 값이 딸려나오니까
+
+for key in scoreDic.keys {
+    print("\(key)")
+}
+//key 값만 나오게 뽑아낼수있다 keys 메소드는 dictionary 에서 key 값만 빼오는것
+
+var myIndex : [String : String] = ["name" : "Kang" , "job" : "student" , "city" : "hwaseong"]
+myIndex["city"] = "busan"
+func printCityName(dic : [String : String]) {
+    //값이 없을수도있으니 옵셔널 바인딩 해준다
+    if let name = dic["name"] , let city = dic["city"]{
+        print("\(city),\(name)")
+    } else {
+        print("없습니다")
+    }
+}
+
+printCityName(dic: myIndex)
+// busan 과 Kang 을 출력한다.
+```
+
+## 12. Set
+
+* 순서가 없으며 중복된값이 없는 유일한 값만 가진다
+* 만약 중복된 값이 있다면 1번만 표시한다. 
+
+### Set 기본적사용법
+
+```
+set 생성 방법
+
+var someSet : Set<Int> = [1,2,3,1]
+// 초기값에 1이 2번들어가있지만 표시되는건 1,2,3 뿐이다
+someSet
+// [1,2,3]
+
+//중복된 값이 있어도 그값은 1번만 표시된다, 그점이 array와 다른점
+someSet.isEmpty
+// false
+
+someSet.count
+// 4
+
+someSet.contains(1)
+// true
+
+someSet.insert(6)
+// [1,2,3,6]
+
+someSet.remove(1)
+// Set 에는 순서가없기때문에 1 의 값을 그냥 제거한다
+```
+
+## 13. closure
+* 이름이 없는 method
+* closure 에는 3가지 타입이 있다.
+
+1. global : 우리가 아는 func 키워드를 사용하여 만드는 함수
+2. nested : 아직 모른다...
+3. closure expressions : 지금 배우는 이름없는 기능수행 코드블록
+
+## closure 예시들
+
+```
+//2개의 수를 곱하는 클로져
+var multiplyClosure : (Int, Int) ->Int = {
+    a,b in return a * b
+}
+
+let result = multiplyClosure(4,2)
+
+//closure 를 parameter로 받는 함수
+func operateTwoNum(a: Int, b: Int , operation : (Int, Int) -> Int) -> Int {
+    //parameter로 2가지 int값을 받아서 int 값을 출력하는 형태를 넣을수있다는것
+    let result = operation(a, b)
+    return result
+}
+
+operateTwoNum(a: 4, b: 2, operation: multiplyClosure)
+
+
+var addClosure : (Int , Int) -> Int = {
+    a,b in return a + b
+}
+operateTwoNum(a: 3, b: 2, operation: addClosure)
+
+//parameter 자체에 클로저를 넣어버리는 방법도있다
+operateTwoNum(a: 4, b: 3){a,b in return a - b}
+//이게 왠지 깔끔하고 맘에든다
+
+
+//클로저에 아무런 변수를 넣지않고 출력값도 없는 것도 가능하다
+let voidClosure : () -> Void = {
+    print("closure 사랑해")
+}
+voidClosure()
+
+//capturing value
+var count = 0
+
+let incrementer = {
+    count += 1
+}
+incrementer()
+incrementer()
+incrementer()
+
+count
+
+
+/*
+//간단한 클로져
+let superSimpleClosure = {
+}
+superSimpleClosure()
+//클로져 실행시에는 함수처럼 ()를 붙여줘야한다
+
+*/
+
+let simpleClosure : (String) -> Void  = { name in
+    print("안녕하세요 \(name)")
+}
+
+simpleClosure("love")
+
+//trailing closure??
+
+```
+
+## 14. struct
+* 관계가 있는것들을묶어서 표현한것
+
+* 사용 예시
+
+```
+//흩어진 아이들을 묶어서 표현
+struct Lecture : CustomStringConvertible {
+    //프로토콜
+    //computed property : 직접 저장하지는 않고 가공시킨 값
+    var description: String {
+        return "Title: \(name), instructor: \(instructor) "
+    }
+    //아래 부분이 stored properties : 직접 저장된 값
+    let name : String
+    let instructor : String
+    let numOfStudents : Int
+    
+    func printLectureName(from instructor : String, lectures : [Lecture]) {
+        var lectureName = ""
+        for lecture in lectures {
+            if instructor == lecture.instructor {
+                lectureName = lecture.name
+            }
+        }
+        print("강사님 이름은! \(lectureName)")
+    }
+
+}
+//아래 부분이 method
+
+
+let lec1 = Lecture(name: "ios Basic", instructor: "Jason", numOfStudents: 9)
+let lec2 = Lecture(name: "ios middle", instructor: "kang", numOfStudents: 9)
+let lec3 = Lecture(name: "ios advanced", instructor: "kim", numOfStudents: 9)
+let lectures = [lec1,lec2,lec3]
+
+lec1.printLectureName(from: "kang", lectures: lectures)
+
+
+
+print(lec1)
+
+struct Person {
+    var firstName : String {
+        //didSet 은 stored propertyd 에서만 사용가능하며 값이 바뀔때 알기위함
+        //값을 바꾸고 난 뒤에 이 값이 이렇게 바뀌었다고 알려줌
+        didSet {
+            print("didSet: \(oldValue)->\(firstName)")
+        }
+        //willSet은 값이 이렇게 바뀔것이다 라고 바뀌기 전에 알려준다
+        willSet {
+            print("willSet: \(firstName)->\(newValue)")
+        }
+    }
+    var lastName : String
+    //만약 let 으로 한다면 바꿀수없다, 위의 값은 stored property
+    
+    //lazy property 는 왜쓰는가?
+    // 맨처음 사용전까진 불러올필요없는 친구들(부담스러운?) 은 이렇게 lazy var로 선언해놓는다, 코스트가 큰경우이거나, 모든사용자에게 사용되지않는경우에
+    lazy var isPopular: Bool = {
+        if fullName == "Jay Park"{
+            return true
+        }else{
+            return false
+        }
+    }()
+    
+    //아래의 computed property 는 var 키워드만 가능, read only
+    var fullName : String {
+        //원래는 read only 이지만 get,set을 해주면 입력도 가능해진다
+        get{
+            return "\(firstName) \(lastName)"
+        }
+        set{
+            if let firstName = newValue.components(separatedBy: " ").first {
+                self.firstName = firstName
+            }
+            if let lastName = newValue.components(separatedBy: " ").last {
+                self.lastName = lastName
+            }
+        }
+        
+    }
+    //type property
+    static let isAlien : Bool = false
+}
+var person = Person(firstName: "jason", lastName: "lee")
+
+person.firstName
+person.firstName = "Kang"
+
+person.lastName = "heesung"
+
+person.fullName = "Kang heesu"
+person.fullName
+person.firstName
+Person.isAlien
+
+person.isPopular
+//computed property , method
+
+//property : 호출시 값을 하나 반환한다
+//method : 계산이 많이 필요하거나 데이터베이스나 파일에 접근해야하면 메소드 사용
+
+
+struct Math {
+    static func abs(value: Int) -> Int {
+        if value > 0 {
+            return value
+        }else {
+            return -value
+        }
+    }
+    var ageOfMath = 0
+    mutating func increasing() {
+        ageOfMath += 1
+    }
+    
+}
+extension Math {
+    static func square(value: Int) -> Int {
+        return value * value
+    }
+    static func half(value : Int) -> Int {
+        return value/2
+    }
+}
+
+
+//struct에 추가 메소드를 넣고싶을때 익스텐션을 이용하여 넣어준다
+extension Int {
+    func square() -> Int {
+        return self * self
+    }
+}
+```
+
+## 15. class
+* heap 이라는 공간에 생성
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
