@@ -51,7 +51,6 @@
 + 가능?
 =
 사진넣기 이렇게 하는건가
-사진위치  
 
 ![개구리 사진](https://pds.joins.com/news/component/htmlphoto_mmdata/201502/28/htm_20150228111110a0103011.jpg)
 
