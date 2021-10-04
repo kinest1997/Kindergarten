@@ -1,6 +1,8 @@
 
 import UIKit
 
+//주석 추가 헤헤
+
 struct Student{
     var studyTime = 0
     var subjects : [Subject]
