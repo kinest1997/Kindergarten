@@ -8,6 +8,7 @@ struct Student{
     mutating func study(){
         studyTime += 1
     }
+    
     func totalAverage() -> Double {
         var subAverage : Double = 0
         var subTotal : Double = 0
@@ -15,7 +16,7 @@ struct Student{
             subTotal += subject.subjectScore
         }
         subAverage = subTotal / Double(subjects.count)
-    
+        
         return subAverage
     }
 }
@@ -23,6 +24,7 @@ struct Subject {
     let subjectName : String
     let subjectScore : Double
 }
+
 let history = Subject(subjectName: "history", subjectScore: 4.2)
 let science = Subject(subjectName: "science", subjectScore: 3.3)
 
@@ -31,8 +33,3 @@ var kang = Student(subjects: kangLec)
 
 kang.totalAverage()
 kang.study()
-
-
-
-
-
