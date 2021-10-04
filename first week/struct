@@ -1,3 +1,4 @@
+```
 import UIKit
 
 struct Student{
@@ -24,5 +25,4 @@ let science = Subject(subjectName: "science", subjectScore: 4.0)
 
 let kang = Student(subjects: history)
 
-
-
+```
