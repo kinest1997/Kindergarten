@@ -1,11 +1,14 @@
-```
+
 import UIKit
 
 struct Student{
-
+    var studyTime = 0
     var subjects : [Subject]
-
-    func totalAverage(student : Student) -> Double {
+    
+    mutating func study(){
+        studyTime += 1
+    }
+    func totalAverage() -> Double {
         var subAverage : Double = 0
         var subTotal : Double = 0
         for subject in subjects {
@@ -21,8 +24,15 @@ struct Subject {
     let subjectScore : Double
 }
 let history = Subject(subjectName: "history", subjectScore: 4.2)
-let science = Subject(subjectName: "science", subjectScore: 4.0)
+let science = Subject(subjectName: "science", subjectScore: 3.3)
 
-let kang = Student(subjects: history)
+var kangLec = [history,science]
+var kang = Student(subjects: kangLec)
 
-```
+kang.totalAverage()
+kang.study()
+
+
+
+
+
