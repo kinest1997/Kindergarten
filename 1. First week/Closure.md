@@ -133,7 +133,6 @@ incrementer()
 
 count
 
-
 /*
 //간단한 클로져
 let superSimpleClosure = {
@@ -148,10 +147,6 @@ let simpleClosure: (String) -> Void  = { name in
 }
 
 simpleClosure("love")
-
-//trailing closure??
-따로 질문
-
 ```
 
 
