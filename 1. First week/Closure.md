@@ -75,7 +75,7 @@ let evenNums = numberList.filter { num in
 * 값을 합칠때 어떤방식으로 합칠지 표현할수있다.
 ```swift
  //팩토리얼
- let factorialFive = [1,2,3,4,5]
+ let factorialFive = [1, 2, 3, 4, 5]
  
  let factorialNumber = factorialFive.reduce(1) { (num1, num2) -> Int in
      num1*num2
@@ -150,6 +150,7 @@ let simpleClosure: (String) -> Void  = { name in
 simpleClosure("love")
 
 //trailing closure??
+따로 질문
 
 ```
 
