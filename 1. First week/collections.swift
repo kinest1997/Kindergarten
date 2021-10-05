@@ -14,7 +14,6 @@ var d: [Int : Double] = [1:2.3, 2:3.3]
 var e: Set<Int> = [1, 2, 3]
 var f: Set = [4, 5, 6]
 
-
 //Array 기본적 사용법
 
 // 추가
@@ -26,7 +25,6 @@ a.insert(1, at: 0)
 //제거
 //특정 위치에 있는것 제거
 a.remove(at: 1)
-
 
 //맨앞이나 맨뒤 제거
 a.removeFirst()
@@ -58,7 +56,6 @@ a.contains(1)
 let alpha = a + b
 alpha
 
-
 //dictionary 기본사용법
 
 //특정 key 값을 가진 value
@@ -76,7 +73,6 @@ c.count
 
 //key 와 value 를 통째로 제거
 c.removeValue(forKey: 3)
-
 
 //set 기본적인 사용법
 
@@ -108,4 +104,3 @@ print(odd)
 //이것을 sorted() 하면, Array의 형태로 정렬해서 출력된다
 odd.sorted()
 print(odd.sorted())
-
