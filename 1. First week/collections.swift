@@ -3,16 +3,16 @@ import UIKit
 // 생성 방법들
 
 // array 생성
-var a : Array<Int> = [1,2,3,4,5,6,7]
-var b : [Int] = [1,2,3,4,5,6]
+var a: Array<Int> = [1, 2, 3, 4, 5, 6, 7]
+var b: [Int] = [1, 2, 3, 4, 5, 6]
 
 //dictionary 생성
-var c : Dictionary<Int,String> = [3:"똥", 2:"바보"]
-var d : [Int : Double] = [1:2.3, 2:3.3]
+var c: Dictionary<Int, String> = [3:"똥", 2:"바보"]
+var d: [Int : Double] = [1:2.3, 2:3.3]
 
 //set 생성
-var e : Set<Int> = [1,2,3]
-var f : Set = [4,5,6]
+var e: Set<Int> = [1, 2, 3]
+var f: Set = [4, 5, 6]
 
 
 //Array 기본적 사용법
@@ -41,8 +41,8 @@ a[2]
 
 //enumerated
 // array 의 index 값과 요소의 값 2가지 모두에 접근하고 싶을때 사용
-var array : Array<Int> = [1,2,3,4]
-for (index,num) in array.enumerated() {
+var array : Array<Int> = [1, 2, 3, 4]
+for (index, num) in array.enumerated() {
     print("\(index+1)번째 숫자는 \(num)입니다")
     //index,num 변수이름을 다른 어떤것으로 바꿔도 괜찮다.
 }
@@ -81,13 +81,13 @@ c.removeValue(forKey: 3)
 //set 기본적인 사용법
 
 // 홀수의 모임
-var odd:Set = [1,3,5,7,9]
+var odd:Set = [1, 3, 5, 7, 9]
         
 // 짝수의 모임
-let even:Set = [2,4,6,8,10]
+let even:Set = [2, 4, 6, 8, 10]
         
 // 소수의 모임
-let prime:Set = [2,3,5,7,11]
+let prime:Set = [2, 3, 5, 7, 11]
         
 //홀수와 짝수의 교집합(Intersection) 만들기
 odd.intersection(even)
