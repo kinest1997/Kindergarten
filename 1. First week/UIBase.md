@@ -64,7 +64,8 @@ let label = UILabel(frame: CGRect(x: 300, y: 100, width: 100, height: 100))
         weight: .semibold)
      	// 라벨의 텍스트 스타일
 
- 	label.textAlignment = NSTextAlignment.center
+
+ 	label.textAlignment = .center
       	// 라벨의 텍스트 정렬 방식
 
         label.numberOfLines = 2
