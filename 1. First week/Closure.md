@@ -5,7 +5,7 @@
 * closure 에는 3가지 타입이 있다.
 
 1. global : 우리가 아는 func 키워드를 사용하여 만드는 함수
-2. nested : 아직 모른다...
+2. nested : 10/11 : 알게되었다 이것의 이름은 중첩 함수, 함수안에 함수가 존재하는 요상한 모양새
 3. closure expressions : 지금 배우는 이름없는 기능수행 코드블록
 
 ## closure 기본 

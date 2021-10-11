@@ -28,7 +28,7 @@
 -
 
 ### 사용 방법
-1. 스토리보드 왼쪽 상단 뷰 컨트롤러에서 새롭게 위치를 정해줘야하는 뷰를 `ctrl + click `한채로 기준이 될 뷰에 드래그한다.
+1. 스토리보드 왼쪽 상단 뷰 컨트롤러에서 새롭게 위치를 정해줘야하는 뷰를 `ctrl + click`한채로 기준이 될 뷰에 드래그한다.
 2. 다양한 메뉴들이 나오는데 필요한 조건들을 거기서 맞춰준다.
 3. 난 스토리보드로 하는거 정말 별로다..
 
@@ -43,7 +43,7 @@
 
 ## 사용법
 * 사용하기위해선 항상 `import Snapkit` 제일먼저 해준다
-* left right 랑 leading, trailing 은 같지만 일부 아랍권 국가에서는 leading 이 오른쪽인 경우가 있기때문에 text 를 보여줄땐left,right 가 아닌 leading,trailing 사용하자. 이미지나 지도의 경우엔 그냥 left, right 로 하자
+* left right 랑 leading, trailing 은 같지만 일부 아랍권 국가에서는 leading 이 오른쪽인 경우가 있기때문에 text 를 보여줄땐 left, right 가 아닌 leading, trailing 사용하자. 이미지나 지도의 경우엔 그냥 left, right 로 하자
 
 ## offset 과 inset 의 차이점
 ### Offset
@@ -106,12 +106,14 @@ $0.leading.equalTo(view.snp.leading).offset(10)
     // 이렇게 하면 위의 조정사항은 무시하고 새롭게 설정한다, 만약 가로모드상태가 되면 이걸 실행 시켜라 이런느낌으로 하는가보다.
 
     simpleLabel.snp.updateConstraints()
-    //  constant value 만 바꾸기때문에 remake처럼 코드를 작성시에는 오류가 난다. 어떻게 작성하는거지 나중에 물어보자 
+    //  constant value 만 바꾸기때문에 remake처럼 코드를 작성시에는 오류가 난다.
+    // 이전에 작성한 constraints들 한정으로 변경이 가능하다, 만약 width, height 를 선언했었다면 그 2가지 값에만 접근이 가능하다
+    // 만약 다른 속성 선언시에는 바로 에러, 또한 원래 있는데 update 에서 호출하지않고 수정하지않은사항이있다면 그건 그대로 잘있다.
 
     simpleLabel.snp.removeConstraints()
     // 제거하는것도있다
 
-	//말고도 prepare 도 있던데 설명이 잘없다..
+	// 말고도 prepare 도 있던데 설명이 잘없다..
 
 
 ```
