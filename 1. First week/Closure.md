@@ -4,24 +4,24 @@
 
 * closure 에는 3가지 타입이 있다.
 
-> 1.  global : 우리가 아는 func 키워드를 사용하여 만드는 함수
-2. nested : 아직 모른다...
+1. global : 우리가 아는 func 키워드를 사용하여 만드는 함수
+2. nested : 10/11 : 알게되었다 이것의 이름은 중첩 함수, 함수안에 함수가 존재하는 요상한 모양새
 3. closure expressions : 지금 배우는 이름없는 기능수행 코드블록
 
 ## closure 기본 
 ```swift
 { (parameters) -> returntype in statements }
 
-var multiply : (Int,Int) -> Int = {
+var multiply: (Int, Int) -> Int = {
    a, b in return a * b
 }
 
-var multiply2 : (Int,Int) -> Int = {
+var multiply2: (Int, Int) -> Int = {
     a , b in a * b
 }
 
 
-var multiply3 : (Int,Int) -> Int = {$0*$1}
+var multiply3: (Int, Int) -> Int = {$0*$1}
 
 3가지 전부다 같은 클로저이다
 ```

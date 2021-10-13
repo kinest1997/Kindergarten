@@ -134,12 +134,6 @@ let addButton = UIButton(frame: CGRect(x: 100 , y: 400, width: 200, height: 200)
 
 ```
 
-## 주요 단축키 
-| 이름 | 단축키 |
-| --- | --- |
-| Quick Help | `command + shift + O` |
-| apple dev document | `command + shift + 0` |
-| 자동완성 켜기 | `esc` |
 
 
 
