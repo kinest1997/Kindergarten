@@ -116,10 +116,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 ```
 
-11. 만약 다른곳에서 현재 네비게이션 컨트롤러가 열고있는 창을 없애고 싶을때, 가장 위에 놓인 뷰를 없애고싶을때 사용가능
+11. 기타 팁
+- 만약 다른곳에서 현재 네비게이션 컨트롤러가 열고있는 창을 없애고 싶을때, 가장 위에 놓인 뷰를 없애고싶을때 사용가능
 - 만약 현재 열린뷰가 하나라면 사용 불가능
-
 
 ```
 self.navigationController?.popViewController(animated: true)
 ```
+
+- 만약 내가 네비게이션컨트롤이 열어준 첫번쨰 뷰, 즉 메인뷰가 나인가? 라고 묻는것
+`return navigationController?.viewControllers.first == self`
