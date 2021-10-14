@@ -58,8 +58,8 @@
 
 ```swift
 import SnapKit
-// 기본문법
-// 위치를설정할 요소.snp.makeConstraints {
+//기본문법
+//위치를설정할 요소.snp.makeConstraints {
 
 }
 까지 적고 자동완성 시키면 아래의 형태가  나온다
@@ -70,7 +70,7 @@ make 가 2번 나오는걸로 보아 클로저 축약이 가능하다
       make.center.equalTo(view.snp.center)
 //	  equalToSuperView()
 //	  equalTo(view)      
-// equalTo 이후 부분은 3가지 모두 동일하다, superView 란 맨처음 가장 기본으로 나오는 view 를 의미함, 근데 마지막방법은 별로같기도
+//equalTo 이후 부분은 3가지 모두 동일하다, superView 란 맨처음 가장 기본으로 나오는 view 를 의미함, 근데 마지막방법은 별로같기도
     }
 
 //여러가지 조건을 한번에 다 연결시킬수도있다
@@ -78,7 +78,7 @@ simpleLabel.snp.makeContraints { make in
   make.leading.top.trailing.bottom.equealToSuperView()
 }
 
-// 위 코드와 아래코드는 같은내용이지만 edge 를 이용하여 훨씬 짧게 작성가능
+//위 코드와 아래코드는 같은내용이지만 edge 를 이용하여 훨씬 짧게 작성가능
 
 child.snp.makeConstraints { make in 
   make.edges.equalToSuperView()
@@ -91,10 +91,10 @@ $0.leading.equalTo(view.snp.leading).offset(10)
 
     simpleLabel.snp.makeConstraints {
     	$0.leading.equalTo(view.snp.leading).offset(10)
-    	// simpleLabel의 leading 이 view 의 leading 에서 +10만큼 떨어져있다는것이다
+    	//simpleLabel의 leading 이 view 의 leading 에서 +10만큼 떨어져있다는것이다
 
     	$0.trailing.equalTo(view.snp.trailing).offset(-10)
-    	// simpleLabel 의 trailing 이 view 의 trailing 에서 -10 만큼 떨어져있다는것
+    	//simpleLabel 의 trailing 이 view 의 trailing 에서 -10 만큼 떨어져있다는것
 
     	$0.width.equalTo(view.snp.width).multipiledBy(0.3)
     	//simpleLabel의 width 크기는 view 의 width에 0.3 을 곱한 만큼의 크기가 된다.
@@ -103,17 +103,17 @@ $0.leading.equalTo(view.snp.leading).offset(10)
 
 
     simpleLabel.snp.remakeConstraints()
-    // 이렇게 하면 위의 조정사항은 무시하고 새롭게 설정한다, 만약 가로모드상태가 되면 이걸 실행 시켜라 이런느낌으로 하는가보다.
+    //이렇게 하면 위의 조정사항은 무시하고 새롭게 설정한다, 만약 가로모드상태가 되면 이걸 실행 시켜라 이런느낌으로 하는가보다.
 
     simpleLabel.snp.updateConstraints()
-    //  constant value 만 바꾸기때문에 remake처럼 코드를 작성시에는 오류가 난다.
-    // 이전에 작성한 constraints들 한정으로 변경이 가능하다, 만약 width, height 를 선언했었다면 그 2가지 값에만 접근이 가능하다
-    // 만약 다른 속성 선언시에는 바로 에러, 또한 원래 있는데 update 에서 호출하지않고 수정하지않은사항이있다면 그건 그대로 잘있다.
+    // constant value 만 바꾸기때문에 remake처럼 코드를 작성시에는 오류가 난다.
+    //이전에 작성한 constraints들 한정으로 변경이 가능하다, 만약 width, height 를 선언했었다면 그 2가지 값에만 접근이 가능하다
+    //만약 다른 속성 선언시에는 바로 에러, 또한 원래 있는데 update 에서 호출하지않고 수정하지않은사항이있다면 그건 그대로 잘있다.
 
     simpleLabel.snp.removeConstraints()
-    // 제거하는것도있다
+    //제거하는것도있다
 
-	// 말고도 prepare 도 있던데 설명이 잘없다..
+	//말고도 prepare 도 있던데 설명이 잘없다..
 
 
 ```

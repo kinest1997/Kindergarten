@@ -29,7 +29,7 @@
 
 ```swift
 let view = UIView(frame: CGRect(x: 80, y: 100, width: 200, height: 200))
-	// 위치,크기 를 정해준다
+	//위치,크기 를 정해준다
 	
         view.backgroundColor = .red
         //뒷 배경색
@@ -55,18 +55,18 @@ let view = UIView(frame: CGRect(x: 80, y: 100, width: 200, height: 200))
 let label = UILabel(frame: CGRect(x: 300, y: 100, width: 100, height: 100))
 
         label.text = "저는 라벨입니다"
-        // 라벨에 들어갈 텍스트
+        //라벨에 들어갈 텍스트
         
         label.textColor = .brown
-        // 라벨에 들어간 텍스트의 색
+        //라벨에 들어간 텍스트의 색
 
         label.font = UIFont.systemFont(ofSize: 20, 
         weight: .semibold)
-     	// 라벨의 텍스트 스타일
+     	//라벨의 텍스트 스타일
 
 
  	label.textAlignment = .center
-      	// 라벨의 텍스트 정렬 방식
+      	//라벨의 텍스트 정렬 방식
 
         label.numberOfLines = 2
         //라벨에 몇줄의 텍스트를 넣을지
@@ -85,19 +85,19 @@ let label = UILabel(frame: CGRect(x: 300, y: 100, width: 100, height: 100))
 let imageView = UIImageView(frame: CGRect(x: 20, y: 20, width: 200 , height: 200))
 
         imageView.image = UIImage(named: "pepe")
-        // 이미지를 이미지 뷰에 할당해주는것, named 는 assets 에존재하는 파일명을 넣어주면된다.
+        //이미지를 이미지 뷰에 할당해주는것, named 는 assets 에존재하는 파일명을 넣어주면된다.
         
-        // imageView.image = #imageLiteral(resourceName: "pepe")
-        // 이렇게 해놓으면 작은 이미지 볼수있음
+        //imageView.image = #imageLiteral(resourceName: "pepe")
+        //이렇게 해놓으면 작은 이미지 볼수있음
         
         imageView.contentMode = .scaleAspectFit
-        // 이미지가 이미지 뷰안에 들어갈때 어떻게 비율을 맞추는가에 대한것(ex : 화면비율에 맞춰 늘이거나 줄이기, 그냥 확대해버리기) 
-        // scaleAspectFill : 비율을 유지한채로 사진을 확대하여 사진의 일부가 이미지 뷰를 벗어나도 전부다 가득찰때까지 확대한다.(사진의 일부가 이미지 뷰에 나오지않는다.)
-        // scaleAspectFit :비율을 유지한채로 사진을 확대하다가 좌우나 상하가 맞는다면 거기까지만 확대한다(이미지뷰에 빈공간이 생긴다)
-        // scaleToFill : 비율따위 무시하고 그냥 이미지뷰에 맞춰 마구마구늘려버리기
+        //이미지가 이미지 뷰안에 들어갈때 어떻게 비율을 맞추는가에 대한것(ex : 화면비율에 맞춰 늘이거나 줄이기, 그냥 확대해버리기) 
+        //scaleAspectFill : 비율을 유지한채로 사진을 확대하여 사진의 일부가 이미지 뷰를 벗어나도 전부다 가득찰때까지 확대한다.(사진의 일부가 이미지 뷰에 나오지않는다.)
+        //scaleAspectFit :비율을 유지한채로 사진을 확대하다가 좌우나 상하가 맞는다면 거기까지만 확대한다(이미지뷰에 빈공간이 생긴다)
+        //scaleToFill : 비율따위 무시하고 그냥 이미지뷰에 맞춰 마구마구늘려버리기
         
         self.view.addSubview(imageView)
-        // 이걸 해줘야 view 에 추가된당
+        //이걸 해줘야 view 에 추가된당
 ```
 
 ---
@@ -118,19 +118,19 @@ let imageView = UIImageView(frame: CGRect(x: 20, y: 20, width: 200 , height: 200
 
 ```swift
 let addButton = UIButton(frame: CGRect(x: 100 , y: 400, width: 200, height: 200))
-// 버튼의 기본 위치 설정
+//버튼의 기본 위치 설정
 
         addButton.setTitle("플러스", for: .normal)
-        // 버튼에 표시될 텍스트,for 뒤는 버튼이 정상인 상태일때 저 텍스트를 표시한다는 뜻 노말 말고도 여러가지있다 나중에 쳐보자
+        //버튼에 표시될 텍스트,for 뒤는 버튼이 정상인 상태일때 저 텍스트를 표시한다는 뜻 노말 말고도 여러가지있다 나중에 쳐보자
         
         addButton.setTitleColor(.blue, for: .normal)
-        // 버튼에 표시된 텍스트의 색
+        //버튼에 표시된 텍스트의 색
         
         addButton.addTarget(self, action:#selector(ViewController.btnAddAction(sender:)),  for: .touchUpInside)
-                     // 여기서 버튼이 행할것, #Selector뷰컨트롤러에서 buttonAddAction 메소드를 한다는것까진 알겠는데 아직 헷갈림 내일 물어보기
+                     //여기서 버튼이 행할것, #Selector뷰컨트롤러에서 buttonAddAction 메소드를 한다는것까진 알겠는데 아직 헷갈림 내일 물어보기
 
         self.view.addSubview(addButton)
-        // 항상 만든 버튼을 view 에 추가하는걸 잊지말자
+        //항상 만든 버튼을 view 에 추가하는걸 잊지말자
 
 ```
 

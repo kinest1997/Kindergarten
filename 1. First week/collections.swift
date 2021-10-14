@@ -1,8 +1,8 @@
 import UIKit
 
-// 생성 방법들
+//생성 방법들
 
-// array 생성
+//array 생성
 var a: Array<Int> = [1, 2, 3, 4, 5, 6, 7]
 var b: [Int] = [1, 2, 3, 4, 5, 6]
 
@@ -16,7 +16,7 @@ var f: Set = [4, 5, 6]
 
 //Array 기본적 사용법
 
-// 추가
+//추가
 a.append(4)
 
 //특정 위치에 추가
@@ -38,7 +38,7 @@ a.removeLast()
 a[2]
 
 //enumerated
-// array 의 index 값과 요소의 값 2가지 모두에 접근하고 싶을때 사용
+//array 의 index 값과 요소의 값 2가지 모두에 접근하고 싶을때 사용
 var array : Array<Int> = [1, 2, 3, 4]
 for (index, num) in array.enumerated() {
     print("\(index+1)번째 숫자는 \(num)입니다")
@@ -52,7 +52,7 @@ a.isEmpty
 //특정 element 를 포함하고있는가
 a.contains(1)
 
-// array 붙이기
+//array 붙이기
 let alpha = a + b
 alpha
 
@@ -76,13 +76,13 @@ c.removeValue(forKey: 3)
 
 //set 기본적인 사용법
 
-// 홀수의 모임
+//홀수의 모임
 var odd:Set = [1, 3, 5, 7, 9]
         
-// 짝수의 모임
+//짝수의 모임
 let even:Set = [2, 4, 6, 8, 10]
         
-// 소수의 모임
+//소수의 모임
 let prime:Set = [2, 3, 5, 7, 11]
         
 //홀수와 짝수의 교집합(Intersection) 만들기

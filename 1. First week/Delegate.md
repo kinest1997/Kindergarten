@@ -30,7 +30,7 @@ class ViewController: UIViewController, TestDelegate, IntegerToString {
 protocol TestDelegate: AnyObject {
 //프로토콜 타입을 anyobject 로 해야 어떤 변수의 타입으로 이 프로토콜을 정해줄수있다
     func hiMaker(data: String) -> String
-    // 위에건 return 이 있는 함수, 아래건 return 이 없는 함수
+    //위에건 return 이 있는 함수, 아래건 return 이 없는 함수
     func labelChange(data: String)
 }
 ```
