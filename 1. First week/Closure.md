@@ -80,7 +80,7 @@ let evenNums = numberList.filter { num in
  let factorialNumber = factorialFive.reduce(1) { (num1, num2) -> Int in
      num1*num2
  }
- // 여기서 reduce 뒤의 숫자를 0번 index 의 값으로 넣어줘야한다 num1의 값이다.
+ //여기서 reduce 뒤의 숫자를 0번 index 의 값으로 넣어줘야한다 num1의 값이다.
  print(factorialNumber) //120
 
 ```

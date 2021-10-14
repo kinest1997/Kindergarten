@@ -37,7 +37,7 @@ class MySingleton {
 	private init() {}
 //이렇게 적으면 싱글톤 객체 생성 완료
 //내가 추가하고싶은 데이터를 이안에 넣어주면 된다.
-// 어떤형식이든 상관없다.
+//어떤형식이든 상관없다.
 
 let iAmGay = false
 let name = "name"
@@ -50,13 +50,13 @@ let myage = 6
 
 ```
 MySingleton.shared.name
-// string 값 name 이 나온다
+//string 값 name 이 나온다
 
 MySingleton.shared.myage
-// Int 값 6 이 나온다
+//Int 값 6 이 나온다
 
 MySingleton.shared.iAmGay
-// false 값이 나온다
+//false 값이 나온다
 ```
 
 

@@ -35,7 +35,7 @@ struct View {
 
 
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-// 1 단계
+//1 단계
 
     let list = [
         View(name: "View", id: 1),
@@ -48,7 +48,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 //이부분이 0 단계
 
 let firstTableView = UITableView()
-// 2단계
+//2단계
 
 override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,18 +57,18 @@ self.view.addSubview(firstTableView)
         firstTableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
-// 3단계
+//3단계
 
     firstTableView.register(UINib(nibName: TableCiewCell, bundle: nil), forCellReuseIdentifier: "key")
-    // 여긴 8단계, nibName 스토리보드로만든 테이블뷰셀 파일의 이름으로
+    //여긴 8단계, nibName 스토리보드로만든 테이블뷰셀 파일의 이름으로
     
 firstTableView.delegate = self
 firstTableView.dataSource = self
-// 4단계
+//4단계
 }
 
 
-// 5단계 아래 두 함수가 생겨나는 두가지
+//5단계 아래 두 함수가 생겨나는 두가지
 func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return list.count
         //여기가 6단계
@@ -78,7 +78,7 @@ func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> 
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "key", for: indexPath)
         //여기서 셀에 접근해서 그 셀의 속성들을 조정해줄수있다.
-        // 만약 내가 직접 만든 셀을 사용하고싶다면 TableViewCell class로 파일을 nib 파일과 같이만들고 그 파일에 여러 메소드들을 집어넣어준다. 그렇게 그 메소드에 접근하고 셀에 표시할 정보들을 바꿔주면됨
+        //만약 내가 직접 만든 셀을 사용하고싶다면 TableViewCell class로 파일을 nib 파일과 같이만들고 그 파일에 여러 메소드들을 집어넣어준다. 그렇게 그 메소드에 접근하고 셀에 표시할 정보들을 바꿔주면됨
         return cell
     }
 }
@@ -94,10 +94,10 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 }
 
 
-// 아래는 커스텀 tableviewcell 이다
-// 새로 파일을 만들때 cocoatouchclass 파일에서 TableViewCell로 만들고 xib파일도 같이 생성해줘야 스토리보드로 할수있음
-// 만들고 나서 xib 파일의 주인을 꼭 내가 만든 파일로 해줘야 둘이 연결이된다, 그리고 기타 다른 구성요소를 넣고나서 코드로 끌어올때 반드시 object 를 tableviewcell로 해줘야 한다.
-// 스토리보드로 오토레이아웃이랑 기본 셀 attribute은 설정했는데 테이블뷰 셀을 만들때는 이게 간단하고 편한거같음.
+//아래는 커스텀 tableviewcell 이다
+//새로 파일을 만들때 cocoatouchclass 파일에서 TableViewCell로 만들고 xib파일도 같이 생성해줘야 스토리보드로 할수있음
+//만들고 나서 xib 파일의 주인을 꼭 내가 만든 파일로 해줘야 둘이 연결이된다, 그리고 기타 다른 구성요소를 넣고나서 코드로 끌어올때 반드시 object 를 tableviewcell로 해줘야 한다.
+//스토리보드로 오토레이아웃이랑 기본 셀 attribute은 설정했는데 테이블뷰 셀을 만들때는 이게 간단하고 편한거같음.
 import UIKit
 
 class TableViewCell: UITableViewCell {

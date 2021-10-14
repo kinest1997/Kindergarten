@@ -8,11 +8,11 @@
 
 ```swift
  let genderSegmentControl = UISegmentedControl()
- // 일단 선언
+ //일단 선언
 
  genderSegmentControl.insertSegment(withTitle: "1번째", at: 0, animated: true)
  genderSegmentControl.insertSegment(withTitle: "2번째", at: 1, animated: true)
- // 이런식으로 세그먼트의 종류 를 늘린다. 이름은 1번째, 그리고 위치는 제일 앞
+ //이런식으로 세그먼트의 종류 를 늘린다. 이름은 1번째, 그리고 위치는 제일 앞
 
 genderSegmentControl.addAction
 //세그먼트에 액션을 추가해줄수있다. 내가 1번쨰를 눌렀을때 그 아래에 뭔가 뜨게 한다던지? 아니면 다른 텍스트 필드로 넘어간다던지.
@@ -25,7 +25,7 @@ genderSegmentControl.selectedSegmentTintColor = .systemCyan
 //선택 되었을떄 색이 내가 설정한걸로 바뀜 이건좀 쓸지도?
 
 ```
-// 그밖에 이미지설정도있고 그런데 과연 쓸런지...
+//그밖에 이미지설정도있고 그런데 과연 쓸런지...
 
 
 

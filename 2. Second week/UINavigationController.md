@@ -26,7 +26,7 @@ guard let windowScene = (scene as? UIWindowScene) else { return }
 
 ```
 window = UIWindow(windowScene: windowScene)
-// 여기서 window 를 설정해준다 근데 위에서 받은 windowScene 를 받는걸로
+//여기서 window 를 설정해준다 근데 위에서 받은 windowScene 를 받는걸로
 //UIScene 랑 UIWindowScene는 서로 상속해주고받는 관계지만  UIWindow는 저둘과 전혀 연관이없다.
 ```
 

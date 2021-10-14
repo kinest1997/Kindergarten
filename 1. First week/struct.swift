@@ -62,7 +62,7 @@ struct Home {
         = Double(ourAge / members.count)
         return Double(averageAge)
     }
-    // 위는 메소드로 만든것 아래는 computed property
+    //위는 메소드로 만든것 아래는 computed property
     var familyAverageWeight: Double {
         var totalWeight = 0.0
         var averageWeight = 0.0
@@ -72,8 +72,8 @@ struct Home {
         averageWeight = totalWeight / Double(members.count)
         return averageWeight
     }
-    // 드디어 안보고 computed property와 method를 가진 struct 만들어냈다
-    // 근데 뭔가 지저분하네
+    //드디어 안보고 computed property와 method를 가진 struct 만들어냈다
+    //근데 뭔가 지저분하네
     
 }
 
