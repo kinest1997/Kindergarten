@@ -52,6 +52,7 @@ justText.keyboardType = .default
  
  ```swift
  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+       //여기에 다양한 조건들을 추가해줄수있다, 키보드에 입력을 끝내면 그다음 텍스트 필드로 넘어가면서 자동을 키보드 띄우기
         justText.resignFirstResponder()
         return true
     }
@@ -62,6 +63,17 @@ justText.keyboardType = .default
 override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         justText.resignFirstResponder()
     }
+```
+
+* 세번째는 키보드에 입력을 끝냈을때 할 행동
+
+```swift
+func textFieldDidEndEditing(_ textField: UITextField) {
+        //텍스트 필드의 입력을 끝낼때 마다 특정조건을 만족하는지 확인하고 만약 만족한다면 특정 메소드를 실행시키거나 상태값을 변경시켜 활성,비활성상태 만들수잇음
+        doneButton.isEnabled = dataDiDFilled()
+        //여기서 dataDidFilled 함수는 반환값으로 bool 값 뱉는 함수
+    }
+
 ```
 
 ## 다른 ViewController 에 정보 넘기기

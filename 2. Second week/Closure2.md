@@ -167,6 +167,7 @@ func doSomething() {
     print("num check #1 = \(num)")
     
     let closure = { [num] in
+        // 여기서 그냥 num에 대괄호 씌워버린다
         print("num check #3 = \(num)")
     }
     
