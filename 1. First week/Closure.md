@@ -85,7 +85,41 @@ let evenNums = numberList.filter { num in
 
 ```
 
-## 4. 기타 연습
+## 4. sort,sorted
+- 배열 내의 값을 어떠한 순서로 재 정렬시키고 싶을때
+- sort 는 현재의 배열값을 바꾸는것, 원본이 변경된다
+- sorted 는 원본 배열은 그대로 두고 사본을 만들어 리턴해주는것
+
+```swift
+var arr = [1, 2, 5, 4, 6]
+arr.sort { (a, b) -> Bool in
+    return a < b
+}
+print(arr) // [1, 2, 4, 5, 6]
+
+
+var arr = [1, 2, 5, 4, 6]
+arr.sort { return $0 < $1 }
+print(arr) // [1, 2, 4, 5, 6]
+
+
+// 아래는 sorted
+var arr = [1, 2, 5, 4, 6]
+arr.sorted()
+print(arr) // [1, 2, 5, 4, 6]
+
+
+var arr = [1, 2, 5, 4, 6]
+var copied = arr.sorted()
+print(arr) // [1, 2, 5, 4, 6]
+print(copied) // [1, 2, 4, 5, 6]
+
+
+print(arr.sorted()) // [1, 2, 4, 5, 6]
+
+```
+
+## 5. 기타 연습
 
 ```swift
 //2개의 수를 곱하는 클로져
