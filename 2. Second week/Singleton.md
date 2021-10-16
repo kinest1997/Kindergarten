@@ -60,9 +60,4 @@ MySingleton.shared.iAmGay
 ```
 
 
-## plist
 
-- Property List 의 준말
-- 아주 간단한 파일 저장법
-- Key, Value 의 Dictionary 구조로 데이터를 저장한다
-- 단순 파일의 형태이다보니 외부 접근이 쉽고 보안이 취약하다
