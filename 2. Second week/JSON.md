@@ -84,7 +84,7 @@ case 키 = "height"
 1. 제일먼저 일단 JSON 파일의 url 을 알아낸다
 
 ```swift
-guard let JSONURL = Bundle.main.url(forResource: "JsonData", withExtension: "JSON") else {
+guard let jsonURL = Bundle.main.url(forResource: "JsonData", withExtension: "JSON") else {
             print("ERROR: JSON 파일 없음")
             return
         }
@@ -94,7 +94,7 @@ guard let JSONURL = Bundle.main.url(forResource: "JsonData", withExtension: "JSO
 
 ```swift
 do {
-            let data = try Data(contentsOf: JSONURL)
+            let data = try Data(contentsOf: jsonURL)
             let list = try JSONDecoder().decode([User].self, from: data)
             self.userList = list
         } catch {
@@ -105,7 +105,9 @@ do {
 3. 이렇게 되면 우리가 만들어뒀던 userList 라는 배열의 모음안에 우리가 만들어놓은 객체형식대로 데이터가 들어가있다, 이제 그것에 접근해서 우리맘대로 사용하면끝
 ```swift
 userList.count
+//elements 의 갯수
 userList[0]
+userList.first
 //제일 앞의 친구에게 접근
 ```
 

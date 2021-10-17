@@ -105,11 +105,11 @@ func loadFromJSON() {
             let data = try Data(contentsOf: JSONURL)
             let list = try JSONDecoder().decode([SomeStruct].self, from: data)
             self.friendList = list
+            //위의 마법같은 3줄로 디코딩 완료 내 friendlist 가 json에서 준 정보로 대치됨
         } catch let error {
             print("ERROR", error.localizedDescription)
         }
     }
-이러면 그냥 자동으로 인코딩 디코딩이 가능한건가? 생각보다 간단한듯하지만 전혀 외워지지않는다.
 ```
 
 5. 이러면 이제 document 에 plist 도 생기고 그곳에 정보를 넣을수도있고 그 정보를 가져올수도있다. 일단 가져오는법
