@@ -148,7 +148,6 @@ override nope(){}
 
 -위의 두개는 거의 쓸일이 없다
  
- - 
   - internal: 기본 상태. 하나의 프로젝트(모듈) 내에서만 사용,(다른 외부 라이브러리를 가져와서 사용하는 SnapKit 같은경우 별도의 모듈로 취급)
   - fileprivate: 하나의 파일 (예. .swift) 내에서 사용 가능
   - private: 괄호 내에서 사용 가능. 하나의 파일에 있는 동일한 class의 extension은 제외
