@@ -77,6 +77,15 @@ func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> 
     //아래건 간단한 기본 셀 
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "key", for: indexPath)
+         var content = cell.defaultContentConfiguration()
+         //defaultContentConfiguration() 은 프로토콜이다
+         //content 가 이제 셀의 기본 컨텐츠 컨피규레이션이고 content 에다가 셀의 속성을 정의해주면된다. 이미지, 문자열, 액세서리 뷰 3가지로 이루어진 형식
+         content.text
+         content.secondaryText
+         content.image
+         cell.contentConfiguration = content
+         //마지막에 셀의 컨텐츠 컨피규레이션이 컨텐츠라고 해줘야함
+
         //여기서 셀에 접근해서 그 셀의 속성들을 조정해줄수있다.
         //만약 내가 직접 만든 셀을 사용하고싶다면 TableViewCell class로 파일을 nib 파일과 같이만들고 그 파일에 여러 메소드들을 집어넣어준다. 그렇게 그 메소드에 접근하고 셀에 표시할 정보들을 바꿔주면됨
         return cell
