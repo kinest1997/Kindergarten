@@ -117,6 +117,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 ```
 
 11. 기타 팁
+- show,dismiss 는 네비컨이 없을때
+- push,pop 은 네비컨이 있을때
+
+- `.pushViewController` 네비게이션 컨트롤러가 있을때 새 창을 띄우고싶을때 push 를 한다
+
 - 만약 다른곳에서 현재 네비게이션 컨트롤러가 열고있는 창을 없애고 싶을때, 가장 위에 놓인 뷰를 없애고싶을때 사용가능
 - 만약 현재 열린뷰가 하나라면 사용 불가능
 
