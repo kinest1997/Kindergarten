@@ -96,13 +96,13 @@ struct SomeStruct: Codable {
 //아래 함수같은 형태를 내가 데이터를 쓰고싶은 곳에 extension 형태로 넣어주고 사용한다.
 func loadFromJSON() {
         // 제이슨 파일의url 찾기
-        guard let jsonURL = Bundle.main.url(forResource: "SomeStruct", withExtension: "json") else {
+        guard let JSONURL = Bundle.main.url(forResource: "SomeStruct", withExtension: "JSON") else {
             print("ERROR: JSON 파일 없음")
             return
         }
         
         do {
-            let data = try Data(contentsOf: jsonURL)
+            let data = try Data(contentsOf: JSONURL)
             let list = try JSONDecoder().decode([SomeStruct].self, from: data)
             self.friendList = list
         } catch let error {

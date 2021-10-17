@@ -114,6 +114,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var frontLabel: UILabel!
     @IBOutlet weak var middleLabel: UILabel!
     
+    //만약 셀 안에 다른 구성요소를 넣고싶다면? cell.contentView 안에 넣어줘야한다
     func setValue(_ data: View) {
         frontLabel.text = String(data.id)
         middleLabel.text = data.name
@@ -126,6 +127,5 @@ class TableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
 }
 ```
