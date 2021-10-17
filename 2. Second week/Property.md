@@ -7,8 +7,6 @@
  * 연산 프로퍼티 : Computed Property
  * 타입 프로퍼티 : Type Property
  
- -
- 
 #### 번외
  
  * 프로퍼티 옵저버 
