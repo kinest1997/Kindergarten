@@ -24,6 +24,8 @@ genderSegmentControl.selectedSegmentIndex ==
 genderSegmentControl.selectedSegmentTintColor = .systemCyan
 //선택 되었을떄 색이 내가 설정한걸로 바뀜 이건좀 쓸지도?
 
+
+
 ```
 //그밖에 이미지설정도있고 그런데 과연 쓸런지...
 
