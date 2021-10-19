@@ -39,6 +39,8 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+    print("노티 받았음")
+   response.something something
         completionHandler()
         //이친구는 아직 모름 어따쓰지
     }
