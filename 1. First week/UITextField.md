@@ -19,6 +19,7 @@ let justTextField = UITextField()
 
 justTextField.delegate = self
 // 텍스트필드의 delegate 는 ChildViewController 즉 self 라고 선언해준다.
+// 이거 안하면 다른함수 작동을 안한다 진짜 꼭해라..
 // 이로서 텍스트 필드의 존재가 완성
 // 기타 layout이나 뷰에 추가하는것은 당연히 해줘야한다.
 ```
@@ -80,8 +81,7 @@ func textFieldDidEndEditing(_ textField: UITextField) {
 
 * 그냥 delegate 사용법이랑 똑같지만, 앞서 배운 delegate 의 기본  사용법을 따라가되 단지 이중으로 delegate 되어 넘겨준다는게 다를뿐. -> 이게 무슨말인가?
 * TextField는 본인이 받은 값을 ChildViewController 에게 넘겨줬다, 그리고 그 넘겨받은 값을 또 MotherViewController 에게로 넘겨주는것
-* 별거없다 똑같이 delegate 설정만 다해주고 `guard let txt = self?.textLabel.text else {return
-            }` 이런식으로 텍스트 라벨 값만 꺼내오고 `txt` 로 정의된 값을 이제 마음대로 사용하면 끝이다
+* 별거없다 똑같이 delegate 설정만 다해주고 `guard let txt = self?.textLabel.text else { return }` 이런식으로 텍스트 라벨 값만 꺼내오고 `txt` 로 정의된 값을 이제 마음대로 사용하면 끝이다
             
 
 
