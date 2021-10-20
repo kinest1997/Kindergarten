@@ -242,7 +242,7 @@ func getWeathers(with: URLRequest, completionBlock: @escaping ([WeatherData]) ->
 getWeathers(with: urlRequest) { list in  
     myList = list
 }
-/정말 초 심플 간단하다, 이함수를 실행시키면? 내 리스트가 외부에서 받아온 리스트로 변경되는것이다. 클로저가 내부 정보값을 들고 밖으로 뛰쳐나와서 수행되기 떄문에.
+//정말 초 심플 간단하다, 이함수를 실행시키면? 내 리스트가 외부에서 받아온 리스트로 변경되는것이다. 클로저가 내부 정보값을 들고 밖으로 뛰쳐나와서 수행되기 떄문에.
 ```
 
 
