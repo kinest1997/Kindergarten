@@ -22,8 +22,6 @@ let firstLabelText = NSMutableAttributedString(string: "첫번째 라벨✍🏽"
 - 폰트의경우 대부분 동일한걸 사용하기때문에, 내가 사용할 폰트는 따로 정의해놓자
 - 애플이모티콘의 경우 폰트의 이름은 AppelColorEmoji 이다
 
-
-
 ```
 let boldNexonFont = UIFont(name: "NEXONLv1GothicOTFBold.otf", size: 50)
 
