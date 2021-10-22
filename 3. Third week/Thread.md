@@ -110,3 +110,46 @@ func loadImageWithAutoLease() {
 }
 ```
 이렇게 하면 5번에 걸쳐서 1000개를 올리고 autoleasePool이 비워진 후 다시 1000개를 올리는 식으로 조절
+
+## DispatchGroup
+
+```
+DispatchGroup
+let label = UILabel()
+
+func useDispatchGroup() {
+    let dispatchGroup = DispatchGroup()
+    
+    let queue1 = DispatchQueue(label: "Data Transform")
+    let queue2 = DispatchQueue(label: "Database")
+    let queue3 = DispatchQueue(label: "Networking")
+    
+    dispatchGroup.notify(queue: DispatchQueue.main) {
+        label.text = "UPDATED!"
+        print("🧚‍♀️ update label text")
+    }
+    
+    queue1.async(group: dispatchGroup) {
+        print("🔗 \(queue1.label)")
+    }
+    
+    queue2.async(group: dispatchGroup) {
+        print("🔗 \(queue2.label)")
+    }
+    
+    queue3.async(group: dispatchGroup) {
+        print("🔗 \(queue3.label)")
+    }
+}
+
+useDispatchGroup()
+```
+
+
+
+
+
+
+
+
+
