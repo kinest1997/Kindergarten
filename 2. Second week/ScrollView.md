@@ -38,7 +38,7 @@ mainView.snp.makeConstraints {
             //메인뷰가 스크롤 뷰에서 얼마나 보여주고싶은지 그 영역을 정하는것 만약 메인뷰가 contentLayoutGuide 보다 작다면 보여지는 화면이 뷰의 크기보다 작기때문에 4방향 스크롤이 가능할것임
 
             $0.width.equalTo(mainScrollView.frameLayoutGuide)
-            //폭을 고정하여 위아래로만 스크롤이 가능하게 한것
+            //폭을 고정하여 위아래로만 스크롤이 가능하게 한것, 혹은 bottom 을 맞추면 자동으로 높이 조절
 
             $0.height.equalTo(2000)
             뷰의 높이를 2천으로 설정하여 

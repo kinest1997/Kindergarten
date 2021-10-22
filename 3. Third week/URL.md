@@ -3,7 +3,9 @@
 ## OSI 7 layer
 - Open Systems Interconnection: 개방형 시스템 상호연결
 - 우리는 주로 7단계인 application 층을 다룬다
-![사진]()
+![사진](https://github.com/kinest1997/Kindergarten/blob/main/images/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202021-10-19%20%EC%98%A4%ED%9B%84%208.27.59.png?raw=true)
+
+![사진2](https://github.com/kinest1997/Kindergarten/blob/main/images/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202021-10-19%20%EC%98%A4%ED%9B%84%208.30.31.png?raw=true)
 
 ## URL
 - Uniform Resource Locator: 네크워크상에 어떠한 리소스가 어디에 있는지 알려주기위한 규약
