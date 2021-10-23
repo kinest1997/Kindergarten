@@ -46,9 +46,8 @@ class MyView: UIViewController {
         attributes()
         layout() 
     }
-    func initialized() {
-        
-    }
+    func initialized() {}
+
     func layout() {
         나중에 오버라이드 해서 레이아웃에 집어넣기만 하면 viewdidload 안에 안넣어도 알아서 잘 작동한다.
     }
