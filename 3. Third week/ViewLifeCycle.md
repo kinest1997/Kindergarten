@@ -1,5 +1,8 @@
 # ViewController Life Cycle
 
+## UIViewController LifeCycle
+![사진](https://t1.daumcdn.net/cfile/tistory/998D703359F037C907)
+
 ## viewDidLoad
 - 뷰 컨트롤러의 모든 뷰들이 메모리에 로드됐을때 호출
 - 메모리에 처음 로드될때 한번만 호출

@@ -83,6 +83,20 @@ extension Double {
 
 2. instance methods, type methods 를 정의하는것(함수작성)
 
+```
+extension UIFont {
+    static func myFont(ofSize: CGFloat, weight: Weight = .regular) -> UIFont {
+        switch weight {
+        case .medium, .semibold, .bold, .heavy, .black:
+            return UIFont(name: "NEXONLv1GothicOTFBold", size: ofSize) ?? .boldSystemFont(ofSize: ofSize)
+        case .ultraLight, .thin, .light:
+            return UIFont(name: "NEXONLv1GothicOTFLight", size: ofSize) ?? .boldSystemFont(ofSize: ofSize)
+        default:
+            return UIFont(name: "NEXONLv1GothicOTF", size: ofSize) ?? .systemFont(ofSize: ofSize)
+        }
+    }
+}
+```
 
 3. 새로운 initializers 를 추가하는것
 
@@ -95,5 +109,13 @@ extension Double {
 
 6. 프로토콜을 준수하게 해주는것 (프로토콜에서 필요한 필수 조건 작성) 
 
+```
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
+
+// 프토로콜에서 쓰라고 강요하는것들 작성
+
+//이렇게 extenstion 으로 빼면 코드를 깔끔하게분배 가능하다
+}
+```
 
 
