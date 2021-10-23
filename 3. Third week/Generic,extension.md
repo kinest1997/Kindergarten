@@ -95,7 +95,6 @@ extension UIFont {
             return UIFont(name: "NEXONLv1GothicOTF", size: ofSize) ?? .systemFont(ofSize: ofSize)
         }
     }
-    
 }
 ```
 
