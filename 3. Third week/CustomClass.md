@@ -57,5 +57,4 @@ class MyView: UIViewController {
         view.backgroundColor = .systemYellow
     }
 }
-
 ```
