@@ -46,6 +46,7 @@ class MyView: UIViewController {
         attributes()
         layout() 
     }
+
     func initialized() {}
 
     func layout() {
