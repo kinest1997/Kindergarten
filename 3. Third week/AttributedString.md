@@ -7,7 +7,7 @@
 ## 사용방법
 1. 내가 넣을 텍스트의 레이아웃을 확인한다(ex: size, color, emoji, font 등)
 
-2. Font 추가의 경우 폰트 파일을 드래그하여 내 번들에 추가하고, plist에 `Fonts provided by application` 를 추가하고 그 하위에 폰트들을 추가해주는데, value 값으로 `NEXONLv1GothicOTFBold.otf` 같은 형식으로 확장자명까지 풀로 넣어주면된다. 이러면 폰트를 내 엑스코드 프로젝트에 등록한것!
+2. Font 추가의 경우 폰트 파일을 드래그하여 내 번들에 추가하고, plist에 `Fonts provided by application` 를 추가하고 그 하위에 폰트들을 추가해주는데, value 값으로 `NEXONLv1GothicOTFBold.otf`, `NEXONLv1GothicOTFBold.tft` 같은 형식으로 확장자명까지 풀로 넣어주면된다. 이러면 폰트를 내 엑스코드 프로젝트에 등록한것!
 
 3. color 의경우 Assets에 들어가서 좌측 하단 + 를 누르고 colorset 을 클릭하면 색을 추가할수있는데 appearance로 다크모드나 라이트모드에서의 색을 정해줄수있고, 색을 srgb 나 p3 에맞는 수치로 세밀하게 색을조절할수있다.
 
