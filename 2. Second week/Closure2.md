@@ -51,7 +51,7 @@ let a = { (label: String) -> String }
 
 -
 
-####Trailing Closure
+#### Trailing Closure
 *  함수의 마지막 파라미터가 클로저일 때,
 이를 파라미터 값 형식이 아닌 함수 뒤에 붙여 작성하는 문법
 이때, Argument Label은 생략된다

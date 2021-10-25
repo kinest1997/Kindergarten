@@ -70,6 +70,38 @@ func unregisterKeyboardNotification() {
     }
 ```
 
+8. 또다른 사용법, 키보드에 새로운 입력이 있을때 그것을 감지하고, 글자수 제한을 두고 그 이상을 입력할경우 뒷부분 자동으로 잘라내기
+
+```
+NotificationCenter.default.addObserver(self, selector: #selector(textDidChange(_:)), name: UITextField.textDidChangeNotification, object: nil)
+
+//UITextField.textDidChangeNotification 라는 이름의 노티를 받게될때 어떤 행동을 할것인가
+
+  @objc private func textDidChange(_ notification: Notification) {
+     guard let textField = notification.object as? UITextField,
+     let text = textField.text
+     //셀렉터 함수로 만들떄 노티의 오브젝트를 텍스트필드로 바꿔주면 모든 텍스트필드에 대하여 노티를 받을수있다
+     //노티의 오브젝트는 any 타입이라 텍스트 필드로 캐스팅 해주는것
+     //그 텍스트 필드의 텍스트도 옵셔널 바인딩 해주고. 아래와 같은 함수 작성가능
+
+     if text.count > 4 {
+     // 4글자 넘어가면 자동으로 키보드 내려감
+     textField.resignFirstResponder()
+     }
+        // 초과되는 텍스트 제거
+        if text.count >= 4 {
+            let index = text.index(text.startIndex, offsetBy: 4)
+            //텍스트의 인덱스를 구해서 0에서부터 4번째까지의 string.index 타입을 얻고
+
+            let newString = text[text.startIndex..<index]
+            //텍스트의 시작 인덱스부터 4번째 인덱스 전까지의 String 을 구한다
+
+            textField.text = String(newString)
+            //구한 string 을 내 텍스트 필드에 넣어준다, 몇개를 더 넣던지간에 무조건 1번째 부터 4번쨰 까지만 입력됨
+        }
+ }
+```
+
 ### CustomNotification
 
 1. 관찰자를 추가하는것은 똑같다.
