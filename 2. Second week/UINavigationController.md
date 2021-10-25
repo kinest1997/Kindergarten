@@ -131,3 +131,14 @@ self.navigationController?.popViewController(animated: true)
 
 - 만약 내가 네비게이션컨트롤이 열어준 첫번쨰 뷰, 즉 메인뷰가 나인가? 라고 묻는것
 `return navigationController?.viewControllers.first == self`
+
+
+- 네비게이션 바를 숨기는법
+`navigationController?.navigationBar.isHidden = true`
+
+- 네비게이션 제스쳐를 사용못하게 하는법
+`navigationController?.interactivePopGestureRecognizer?.isEnabled = false`
+
+- 네비게이션의 루트뷰로 돌아가는 방법
+`self.navigationController?.popToRootViewController(animated: true)`
+
