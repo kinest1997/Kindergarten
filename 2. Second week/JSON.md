@@ -9,6 +9,16 @@
  * 자바 스크립트 문법과 굉장히 유사하지만 텍스트 형식일 뿐이다.
  * 자바스크립트에서 사용하지만 특정 언어에 종속되지않아 대부분의 프로그래밍언어에서 JSON포맷의 데이터를 다룰수있는 라이브러리를 제공해준다(ex: Swift 에서는 JSONDecoder 같은거)
 
+### 문법
+
+1. JSON 데이터는 이름과 값의 쌍으로 이루어집니다.
+
+2. JSON 데이터는 쉼표(,)로 나열됩니다.
+
+3. 객체(object)는 중괄호({})로 둘러쌓아 표현합니다.
+
+4. 배열(array)은 대괄호([])로 둘러쌓아 표현합니다.
+
 
 - 예시
 
@@ -56,7 +66,6 @@ struct User: Codable {
     var name: String
     var gay: Bool
     var 키: Double
-
 }
 ```
 
@@ -77,7 +86,7 @@ enum CodingKeys: String, CodingKey {
 case id, name, gay
 case 키 = "height"
 // 왼쪽은 내가 붙인 변수 이름, 오른쪽은 JSON 에서의 value 의 key값
-    }
+}
 ```
 
 ### 사용방법
