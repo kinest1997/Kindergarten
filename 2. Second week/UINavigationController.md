@@ -141,3 +141,12 @@ self.navigationController?.popViewController(animated: true)
 - 네비게이션의 루트뷰로 돌아가는 방법
 `self.navigationController?.popToRootViewController(animated: true)`
 
+- 네비게이션바에 버튼을 추가하는법.
+```
+navigationItem.leftBarButtonItem = UIBarButtonItem()
+//왼쪽이 있으면, 오른쪽도 있다.
+navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle"), style: .plain, target: nil, action: nil)
+```
+
+- 화면을 스크롤하면 네비게이션 바를 자동으로 숨겨주는것
+`navigationController?.hidesBarsOnSwipe = true`
