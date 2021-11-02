@@ -1,13 +1,13 @@
 # Kindergarten
 
-## 0. 기타
-[단축키]()
+##  기타
+[단축키](https://github.com/kinest1997/Kindergarten/blob/main/Else/%EB%8B%A8%EC%B6%95%ED%82%A4%EC%99%80%20%EA%BF%80%ED%8C%81%20.md#%EC%A3%BC%EC%9A%94-%EB%8B%A8%EC%B6%95%ED%82%A4)
 
-## 1. 시작전 찍먹들
+## 시작전 찍먹들
 > 1. [마크다운](https://github.com/kinest1997/Kindergarden/blob/main/Markdown.md#%EC%A7%84%EC%A7%9C-%EC%99%95%EC%A0%9C%EB%AA%A9)  
 > 2. [iOS 앱 개발 올인원 패키지 Online.](https://github.com/kinest1997/Kindergarden/blob/main/Swift%20Basic.md)
 
-## 2. 1주차 
+## 1주차 
 
 | 강의요약 | 실습 | 비고 | 
 | :--- | :---| :--- |
@@ -21,7 +21,7 @@
 | [Delegate](https://github.com/kinest1997/Kindergarten/blob/main/1.%20First%20week/Delegate.md#delegate) | - | 데이터전달방법 첫째 |
 | [UITextField]() | - | |
 
-## 3. 2주차
+## 2주차
 
 | 강의요약 | 실습 | 비고 | 
 | :--- | :---| :--- |
@@ -38,7 +38,7 @@
 | [JSON](https://github.com/kinest1997/Kindergarten/blob/main/2.%20Second%20week/JSON.md#jsonxml) | - | 나중에 API 따와보기 |
 | [Realm](https://github.com/kinest1997/Kindergarten/blob/main/2.%20Second%20week/Realm.md#realm) | - | 생각보다 매우편함 | 
 
-## 4. 3주차
+## 3주차
 
 | 강의요약 | 실습 | 비고 | 
 | :--- | :---| :--- |
@@ -54,8 +54,16 @@
 | [CustomClass](https://github.com/kinest1997/Kindergarten/blob/main/3.%20Third%20week/CustomClass.md#customclass) | - | 매우편함 |
 
 
+## 4주차
 
-
+| 강의요약 | 실습 | 비고 |
+| :--- | :---| :--- |
+| [Firebase](https://github.com/kinest1997/Kindergarten/blob/main/4.%20Fourth%20week/Firebase/FirebaseBasic.md#firebase) | - |
+| [FirebaseAuth](https://github.com/kinest1997/Kindergarten/blob/main/4.%20Fourth%20week/Firebase/Auth.md#oauth-%EB%9E%80) | - |
+| [FirebaseDatabase](https://github.com/kinest1997/Kindergarten/blob/main/4.%20Fourth%20week/Firebase/DataBase.md#firebase-realtime-database) | - |
+| [FirebaseRemoteConfig](https://github.com/kinest1997/Kindergarten/blob/main/4.%20Fourth%20week/Firebase/RemoteConfig.md#remote-config) | - |
+| [CollectionView](https://github.com/kinest1997/Kindergarten/blob/main/4.%20Fourth%20week/CollectionView.md#collectionview) | - | 미친거같다 |
+|[Kingfisher](https://github.com/kinest1997/Kindergarten/blob/main/4.%20Fourth%20week/Kingfisher.md#kingfisher) | - | - |
 
 
 
