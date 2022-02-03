@@ -4,7 +4,7 @@
 [단축키](https://github.com/kinest1997/Kindergarten/blob/main/Else/%EB%8B%A8%EC%B6%95%ED%82%A4%EC%99%80%20%EA%BF%80%ED%8C%81%20.md#%EC%A3%BC%EC%9A%94-%EB%8B%A8%EC%B6%95%ED%82%A4)
 
 ## 시작전 찍먹들
-> 1. [마크다운](https://github.com/kinest1997/Kindergarden/blob/main/Markdown.md#%EC%A7%84%EC%A7%9C-%EC%99%95%EC%A0%9C%EB%AA%A9)  
+> 1. [마크다운](https://github.com/kinest1997/Kindergarten/blob/main/0.%20Precede/Markdown.md)  
 > 2. [iOS 앱 개발 올인원 패키지 Online.](https://github.com/kinest1997/Kindergarten/blob/main/0.%20Precede/Swift%20Basic.md)
 
 ## 1주차 
