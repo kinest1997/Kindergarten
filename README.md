@@ -70,5 +70,8 @@
 
 | 강의요약 | 실습 | 비고 |
 | :--- | :---| :--- |
-| RxSwift| 
-| Combine |
+| [RxSwift](https://github.com/kinest1997/Kindergarten/blob/main/RX/Rx%20Swift.md)| [쉐이커](https://github.com/kinest1997/Shaker) | 하나의 흐름...|
+| [Rxcocoa](https://github.com/kinest1997/Kindergarten/blob/main/RX/RxCocoa.md)|위와 동일 | 위와 동일 |
+
+## Combine
+| [Combine](https://github.com/kinest1997/Kindergarten/blob/main/Combine/Combine.md) | - |늦게태어난 적장자 느낌?|
