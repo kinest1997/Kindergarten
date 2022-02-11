@@ -107,6 +107,21 @@ weak	unsafe_unretained;	readwrite	readonly
 4. Derived
 
 ### Variables
+- 변수, 즉 저장내용이 변할수있는것.
+- `extern int a, b;` 아래와 같이 선언 가능하다.
+
+### Lvalue, Rvalue
+- Lvalue의 경우 메모리의 주소를 저장하기때문에 선언문 좌우 상관없이 위치할수있다
+- Rvalue의 경우 메모리에 올라간 값을 가지고있기때문에 오른쪽에만 올수있다
+
+### Constant
+- 상수, 즉 저장내용이 변할수없는것
+- 선언방법이 2가지가있다
+1. `#define` 전처리기를 사용하는것 
+2. `const`키워드를 사용하는것
+
+### Operators
+- 이건 대충 알테니 넘어가고
 
 
 ### @property
