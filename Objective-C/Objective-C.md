@@ -76,7 +76,7 @@
 
 ### keyWord
 
-- 아래 키워드들은 몇몇 반전된 단어들이다. 
+- 아래 키워드들이 있다.
 
 auto	else	long	switch
 break	enum	register	typedef
@@ -122,8 +122,33 @@ weak	unsafe_unretained;	readwrite	readonly
 
 ### Operators
 - 이건 대충 알테니 넘어가고
+- 몰랐던것! ++ 를할경우 int타입은 1을증가시켜준다
+- 반대로 -- 하면 1을 감소
 
+### Class
+- 인스턴스 생성시에 [[SomeClass alloc]init] 이런식으로 생성한다
+- 모든 class는 NSObject를 최상위에 상속한다
 
 ### @property
 
+### 토큰
+- 프로그래밍을 구성하는 기본적인요소 6가지
+- 키워드, 식별자, 상수, 문자열리터럴, 키워드
 
+### 데이터타입
+- int: 정수형
+- enum: 열거형
+- void: 공허형
+- derieved: 파생형(pointer, array, structure, union, function)등이 있다
+
+### Pointer
+- 클래스에 인스턴스를 만들때 포인터형을 사용해야한다.
+- 문자열의 경우 반드시 `@`를 문자열앞에 붙여줘야한다
+
+
+### Inherit
+- 상속
+- 상속은 헤더파일에서 상속처리를해주고 메인파일에는 현재 클래스만 작성한다
+- 헤더파일에서는 메소드들의 선언만 해준다. 
+
+### 캡슐화 
